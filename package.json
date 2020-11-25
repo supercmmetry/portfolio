@@ -15,12 +15,15 @@
     "@commitlint/config-conventional": "^11.0.0",
     "autoprefixer": "^10.0.2",
     "next": "10.0.3",
+    "next-fonts": "^1.5.1",
+    "next-images": "^1.6.2",
     "postcss": "^8.1.10",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-page-scroller": "^2.0.11-beta"
   },
   "devDependencies": {
+    "babel-plugin-inline-react-svg": "^1.1.2",
     "husky": "^4.3.0",
     "standard": "^16.0.3",
     "tailwindcss": "^2.0.1"
