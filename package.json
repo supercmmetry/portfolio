@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "next": "next"
+    "next": "next",
+    "standard": "standard",
+    "deploy": "next build && next export && wrangler publish"
   },
   "dependencies": {
     "@commitlint/cli": "^11.0.0",
@@ -16,7 +18,8 @@
     "react-dom": "17.0.1"
   },
   "devDependencies": {
-    "husky": "^4.3.0"
+    "husky": "^4.3.0",
+    "standard": "^16.0.3"
   },
   "husky": {
     "hooks": {

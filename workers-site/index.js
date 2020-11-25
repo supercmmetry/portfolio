@@ -16,17 +16,17 @@ addEventListener('fetch', event => {
     if (DEBUG) {
       return event.respondWith(
         new Response(e.message || e.toString(), {
-          status: 500,
-        }),
+          status: 500
+        })
       )
     }
     event.respondWith(new Response('Internal Error', { status: 500 }))
   }
 })
 
-async function handleEvent(event) {
+async function handleEvent (event) {
   const url = new URL(event.request.url)
-  let options = {}
+  const options = {}
 
   /**
    * You can add custom logic to how we fetch your assets
@@ -38,7 +38,7 @@ async function handleEvent(event) {
     if (DEBUG) {
       // customize caching
       options.cacheControl = {
-        bypassCache: true,
+        bypassCache: true
       }
     }
     return await getAssetFromKV(event, options)
@@ -46,8 +46,8 @@ async function handleEvent(event) {
     // if an error is thrown try to serve the asset at 404.html
     if (!DEBUG) {
       try {
-        let notFoundResponse = await getAssetFromKV(event, {
-          mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/404.html`, req),
+        const notFoundResponse = await getAssetFromKV(event, {
+          mapRequestToAsset: req => new Request(`${new URL(req.url).origin}/404.html`, req)
         })
 
         return new Response(notFoundResponse.body, { ...notFoundResponse, status: 404 })
@@ -65,11 +65,11 @@ async function handleEvent(event) {
  * route on a zone, or if you only want your static content
  * to exist at a specific path.
  */
-function handlePrefix(prefix) {
+function handlePrefix (prefix) {
   return request => {
     // compute the default (e.g. / -> index.html)
-    let defaultAssetKey = mapRequestToAsset(request)
-    let url = new URL(defaultAssetKey.url)
+    const defaultAssetKey = mapRequestToAsset(request)
+    const url = new URL(defaultAssetKey.url)
 
     // strip the prefix from the path for lookup
     url.pathname = url.pathname.replace(prefix, '/')
