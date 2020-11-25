@@ -1,5 +1,5 @@
-import { Pages } from '../src'
+import * as App from '../src'
 
-export default function Main () {
-  return Pages.HomePage()
+export default function Home () {
+  return App.Pages.HomePage()
 }
