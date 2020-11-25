@@ -1,0 +1,10 @@
+name = "portfolio"
+type = "webpack"
+account_id = "ad45831ce799142bb129bfab4881b236"
+workers_dev = true
+route = ""
+zone_id = ""
+
+[site]
+bucket = "./out"
+entry-point = "workers-site"
