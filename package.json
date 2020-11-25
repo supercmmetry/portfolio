@@ -6,20 +6,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "next": "next",
-    "standard": "standard",
+    "export": "next build && next export",
+    "fix": "standard --fix src && standard --fix pages",
     "deploy": "next build && next export && wrangler publish"
   },
   "dependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "autoprefixer": "^10.0.2",
     "next": "10.0.3",
+    "postcss": "^8.1.10",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-page-scroller": "^2.0.11-beta"
   },
   "devDependencies": {
     "husky": "^4.3.0",
-    "standard": "^16.0.3"
+    "standard": "^16.0.3",
+    "tailwindcss": "^2.0.1"
   },
   "husky": {
     "hooks": {
