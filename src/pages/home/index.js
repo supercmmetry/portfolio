@@ -1,22 +1,11 @@
 import React from 'react'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
+import { FaviconComponent } from '../../components'
 
 export default function HomePage () {
-  const router = useRouter()
-
   return (
     <>
-      <Head>
-        <link rel='shortcut icon' href='/favicon.ico' />
-      </Head>
+      <FaviconComponent />
       <h1> My Portfolio </h1>
-      <button onClick={() => {
-        router.push('/about')
-      }}
-      >
-        click me
-      </button>
     </>
   )
 }
