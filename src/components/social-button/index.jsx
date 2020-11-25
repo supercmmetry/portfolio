@@ -1,7 +1,7 @@
-import GithubSVG from '../../assets/github.svg'
-import LinkedInSVG from '../../assets/linkedin.svg'
-import MailSVG from '../../assets/mail.svg'
-import TelegramSVG from '../../assets/telegram.svg'
+import { ReactComponent as GithubSVG } from '../../assets/github.svg'
+import { ReactComponent as LinkedInSVG } from '../../assets/linkedin.svg'
+import { ReactComponent as MailSVG } from '../../assets/mail.svg'
+import { ReactComponent as TelegramSVG } from '../../assets/telegram.svg'
 
 export default function SocialButton (props) {
   const svgStyle = 'w-9 h-9 fill-gray hover:fill-orange'
