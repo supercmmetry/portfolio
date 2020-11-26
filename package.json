@@ -13,7 +13,7 @@
     "export": "run-s build && next export",
     "fix": "standard --fix components && standard --fix pages",
     "deploy": "run-s export && wrangler publish",
-    "test:lint": "standard src && standard pages",
+    "test:lint": "standard components && standard pages",
     "test": "run-s test:lint"
   },
   "dependencies": {
