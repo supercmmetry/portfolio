@@ -1,0 +1,53 @@
+name: Deploy
+on: [pull_request, push]
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v2
+
+  tests:
+    needs: commitlint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Cache yarn dependencies
+      uses: c-hive/gha-yarn-cache@v1
+
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - run: yarn install --frozen-lockfile
+    - run: yarn test
+      env:
+        CI: true
+
+  deploy:
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Cache yarn dependencies
+      uses: c-hive/gha-yarn-cache@v1
+
+    - name: Build
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - run: yarn install --frozen-lockfile
+    - run: yarn export
+      env:
+        CI: true
+    
+    - name: Publish
+      uses: cloudflare/wrangler-action@1.3.0
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_WORKERS_API_TOKEN }}
+  
