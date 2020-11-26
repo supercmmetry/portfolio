@@ -12,7 +12,7 @@
     "dev": "run-s build:tailwind dev:next",
     "export": "run-s build && next export",
     "fix": "standard --fix src && standard --fix pages",
-    "deploy": "run-s build && next export && wrangler publish",
+    "deploy": "run-s export && wrangler publish",
     "test:lint": "standard src && standard pages",
     "test": "run-s test:lint"
   },
