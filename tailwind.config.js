@@ -4,20 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        palleteBlack: '#272727',
-        palleteGray: '#747474',
-        palleteOrange: '#FF652F',
-        palleteYellow: '#FFE400',
-        palleteGreen: '#14A76C'
+        background: '#12232E',
+        foreground: '#EEFBFB',
+        disabled: '#203647',
+        hover: '#04D9FF',
+        normal: '#007CC7'
       },
-      pallete: {
-        black: '#272727',
-        gray: '#747474',
-        orange: '#FF652F',
-        yellow: '#FFE400',
-        green: '#14A76C'
-      },
-      fill: theme => theme('pallete'),
+      fill: theme => theme('colors'),
       fontFamily: {
         workSans: ['WorkSans', 'serif']
       }
