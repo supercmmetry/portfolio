@@ -11,7 +11,7 @@
     "start": "run-s build:tailwind start:next",
     "dev": "run-s build:tailwind dev:next",
     "export": "run-s build && next export",
-    "fix": "standard --fix src && standard --fix pages",
+    "fix": "standard --fix components && standard --fix pages",
     "deploy": "run-s export && wrangler publish",
     "test:lint": "standard src && standard pages",
     "test": "run-s test:lint"

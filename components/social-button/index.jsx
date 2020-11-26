@@ -1,10 +1,10 @@
-import { ReactComponent as GithubSVG } from '../../assets/github.svg'
-import { ReactComponent as LinkedInSVG } from '../../assets/linkedin.svg'
-import { ReactComponent as MailSVG } from '../../assets/mail.svg'
-import { ReactComponent as TelegramSVG } from '../../assets/telegram.svg'
+import { ReactComponent as GithubSVG } from '../../assets/svg/github.svg'
+import { ReactComponent as LinkedInSVG } from '../../assets/svg/linkedin.svg'
+import { ReactComponent as MailSVG } from '../../assets/svg/mail.svg'
+import { ReactComponent as TelegramSVG } from '../../assets/svg/telegram.svg'
 
 export default function SocialButton (props) {
-  const svgStyle = 'w-9 h-9 fill-gray hover:fill-orange'
+  const svgStyle = 'w-9 h-9 fill-gray hover:fill-orange ' + props.className
   const typeMap = {
     github: <GithubSVG className={svgStyle} />,
     mail: <MailSVG className={svgStyle} />,
