@@ -1,10 +1,18 @@
 import ProfilePictureImage from '../../assets/image/rory.jpg'
 
-export default function ProfilePictureComponent() {
+export default function ProfilePictureComponent (props) {
   return (
     <>
-      <div >
-        <img src={ProfilePictureImage} style={{ borderRadius: '50%' }} className='w-32 h-32 border-disabled border-2'/>
+      <div className={props.className}>
+        <img
+          src={ProfilePictureImage} style={{
+            borderRadius: '50%',
+            width: '128px',
+            height: '128px',
+            minWidth: '128px',
+            minHeight: '128px'
+          }} className='border-normal border-2'
+        />
       </div>
     </>
   )

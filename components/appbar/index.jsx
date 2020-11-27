@@ -9,7 +9,7 @@ export default function AppBar () {
           <span className='font-workSans font-semibold text-hover text-3xl'> c </span>
           <span className='font-workSans font-semibold text-foreground text-3xl'> mmetry </span>
         </div>
-        <div className='flex justify-end space-between w-full mr-2'>
+        <div className='justify-end space-between w-full mr-2 hidden sm:flex'>
           <SocialButton type='github' className='m-2' />
           <SocialButton type='telegram' className='m-2' />
           <SocialButton type='linkedin' className='m-2' />
