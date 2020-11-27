@@ -5,7 +5,7 @@ export default function IntroductionComponent () {
     <>
       <div className='p-5'>
         <div className='flex flex-col sm:flex-row sm:justify-start'>
-          <ProfilePictureComponent className='sm:mr-6 ml-auto mr-auto sm:ml-0 sm:mr-0'/>
+          <ProfilePictureComponent className='sm:mr-6 ml-auto mr-auto sm:ml-0 sm:mr-0' />
           <div className='flex flex-col mt-5 ml-auto mr-auto sm:ml-0 sm:mr-0'>
             <span className='font-workSans font-semibold text-foreground text-4xl text-center'> Hi! I'm Vishaal Selvaraj, </span>
             <div className='ml-auto mr-auto sm:ml-0 sm:mr-0 text-center'>

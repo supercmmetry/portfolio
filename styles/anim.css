@@ -1,0 +1,8 @@
+.smooth-transition {
+  transition: transform .8s cubic-bezier(.58,-0.37,.45,1.46),
+    color 0s ease .4s;
+}
+
+.rotate-360 {
+  transform: rotate(360deg);
+}

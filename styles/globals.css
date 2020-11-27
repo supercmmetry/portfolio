@@ -1,10 +1,5 @@
-@font-face {
-  font-family: "WorkSans";
-  src: url('/fonts/WorkSans-Light.ttf');
-  src: url('/fonts/WorkSans-Regular.ttf');
-  src: url('/fonts/WorkSans-Medium.ttf');
-  src: url('/fonts/WorkSans-SemiBold.ttf');
-}
+@import 'anim.css';
+@import 'fonts.css';
 
 html,
 body {
@@ -22,4 +17,23 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.align-vh-center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
+
+.no-tap-highlight {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.layer-high {
+  z-index: 10
 }
