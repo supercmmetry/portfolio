@@ -3,7 +3,7 @@ import { FaviconComponent, AppBar, PageScroller, SocialFloatingActionButton, Foo
 export default function HomePage () {
   return (
     <>
-      <script src='http://unpkg.com/prevent-pull-refresh' />
+      <script src='https://unpkg.com/prevent-pull-refresh' />
       <FaviconComponent />
       <AppBar />
       <div className='flex flex-row ml-auto mr-auto sm:ml-0 sm:mr-0'>

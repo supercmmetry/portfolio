@@ -6,7 +6,7 @@ import { ReactComponent as ContactSVG } from '../../assets/svg/contact-book.svg'
 import { execActionFromType } from '../../utils/actions'
 
 export default function SocialButton (props) {
-  const svgStyle = 'w-9 h-9 fill-foreground ' + (props.raw ? '' : 'hover:fill-hover ') + props.className
+  const svgStyle = 'w-9 h-9 fill-foreground smooth-transition ' + (props.raw ? '' : 'hover:fill-hover ') + props.className
   const typeMap = {
     github: <GithubSVG className={svgStyle} />,
     mail: <MailSVG className={svgStyle} />,

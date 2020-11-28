@@ -29,8 +29,11 @@ function Indicator (props) {
     <div className='h-auto w-auto mt-auto mb-auto ml-2 sm:mr-4'>
       <div className='flex flex-col space-between h-full'>
         {props.pages.map(i => {
-          /* eslint-disable-next-line */
-          return <IndicatorDot focused={props.focused === i} onClick={() => props.pageOnChange(i)} />
+          return (
+            <div key={`indicator-dot-${i}`}>
+              <IndicatorDot focused={props.focused === i} onClick={() => props.pageOnChange(i)} />
+            </div>
+          )
         })}
       </div>
     </div>

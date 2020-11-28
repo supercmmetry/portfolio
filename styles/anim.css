@@ -4,7 +4,7 @@
 }
 
 .smooth-transition {
-  transition: transform 0.6s ease .4s, opacity 1s, background 0.8s, color 0.8s;
+  transition: transform 0.6s ease .4s, opacity 1s, background 0.8s, color 0.8s, fill 0.5s;
 }
 
 .base-transition {
