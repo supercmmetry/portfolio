@@ -51,6 +51,17 @@
 
 .ul-large li {
   padding: 8px 0;
+  font-size: 25px;
+}
+
+.ul-small {
+  margin-top: 1em;
+  padding-left: 10px;
+  list-style: initial;
+}
+
+.ul-small li {
+  padding: 8px 0;
   font-size: 20px;
 }
 

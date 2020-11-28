@@ -1,25 +1,32 @@
-export default function SkillsComponent (props) {
+import SkinButton from '../skin-button'
+import StyledText from '../styled-text'
+
+export default function SkillsComponent(props) {
   return (
     <div className={props.className}>
       <div className='p-5 flex flex-col'>
         <span className='font-workSans font-semibold text-hover text-3xl sm:text-5xl'> I'm comfortable writing </span>
-        <ul className='ul-large text-foreground ml-3'>
+        <ul className='ul-small sm:ul-large text-foreground ml-3'>
           <li>
-            <span className='font-workSans font-regular text-foreground text-2xl sm:text-4xl text-center'> C/C++ & Rust </span>
+            <StyledText> C/C++ & Rust </StyledText>
           </li>
           <li>
-            <span className='font-workSans font-regular text-foreground text-2xl sm:text-4xl text-center'> C# & VB.Net </span>
+            <StyledText> C# & VB.Net </StyledText>
           </li>
           <li>
-            <span className='font-workSans font-regular text-foreground text-2xl sm:text-4xl text-center'> Go </span>
+            <StyledText> Go </StyledText>
           </li>
           <li>
-            <span className='font-workSans font-regular text-foreground text-2xl sm:text-4xl text-center'> Python </span>
+            <StyledText> Python </StyledText>
           </li>
           <li>
-            <span className='font-workSans font-regular text-foreground text-2xl sm:text-4xl text-center'> Kotlin & Java </span>
+            <StyledText> Kotlin & Java </StyledText>
           </li>
         </ul>
+        <div className='hidden sm:flex mt-10 flex-row w-full'>
+          <SkinButton className='mr-auto' onClick={() => props.setCurrentPage(props.page - 1)}> {'< Back'} </SkinButton>
+          <SkinButton onClick={() => props.setCurrentPage(props.page + 1)}> {'Next >'} </SkinButton>
+        </div>
       </div>
     </div>
   )

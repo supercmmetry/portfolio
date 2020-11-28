@@ -1,7 +1,7 @@
 import ProfilePictureComponent from '../profile-pic'
 import SkinButton from '../skin-button'
 
-export default function IntroductionComponent(props) {
+export default function IntroductionComponent (props) {
   return (
     <div className={props.className}>
       <div className='p-5 w-fit'>

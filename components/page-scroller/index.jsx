@@ -2,8 +2,10 @@ import React from 'react'
 import ReactPageScroller from 'react-page-scroller'
 import IntroductionComponent from '../introduction'
 import SkillsComponent from '../skills'
+import ProficiencyComponent from '../proficiency'
 
-function Indicator(props) {
+
+function Indicator (props) {
   const IndicatorDot = (props) => {
     let extra = ''
 
@@ -33,8 +35,7 @@ function Indicator(props) {
   )
 }
 
-
-export default function PageScroller(props) {
+export default function PageScroller (props) {
   const [currentPage, setCurrentPage] = React.useState(0)
 
   const handlePageOnChange = (i) => {
@@ -45,13 +46,14 @@ export default function PageScroller(props) {
     <>
       <div className={props.className}>
         <div className='flex flex-row'>
-          <Indicator focused={currentPage} pages={[0, 1]} pageOnChange={handlePageOnChange} />
+          <Indicator focused={currentPage} pages={[0, 1, 2]} pageOnChange={handlePageOnChange} />
           <ReactPageScroller
             pageOnChange={handlePageOnChange} customPageNumber={currentPage}
             transitionTimingFunction='ease' containerWidth='auto' containerHeight='65vh'
           >
-            <IntroductionComponent className='w-full h-full' handleNextPage={() => setCurrentPage(1)}/>
-            <SkillsComponent className='w-full h-full' />
+            <IntroductionComponent className='w-full h-full' handleNextPage={() => setCurrentPage(1)} />
+            <SkillsComponent className='w-full h-full' setCurrentPage={setCurrentPage} page={1} />
+            <ProficiencyComponent className='w-full h-full' setCurrentPage={setCurrentPage} page={2} />
           </ReactPageScroller>
         </div>
       </div>
