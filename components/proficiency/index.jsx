@@ -1,12 +1,12 @@
 import StyledText from '../styled-text'
 import SkinButton from '../skin-button'
 
-export default function ProficiencyComponent(props) {
+export default function ProficiencyComponent (props) {
   return (
     <div className={props.className}>
       <div className='p-5 flex flex-col'>
-        <span className='font-workSans font-semibold text-hover text-3xl sm:text-5xl'> I'm experienced with building </span>
-        <ul className='ul-small sm:ul-large text-foreground ml-3'>
+        <span className='font-workSans font-semibold text-hover text-3xl sm:text-5xl'> I'm experienced in building </span>
+        <ul className='ul-custom text-foreground ml-3'>
           <li>
             <StyledText> RESTful APIs with </StyledText>
             <StyledText highlight> FastAPI, Node.js, Go, Rocket </StyledText>
@@ -17,15 +17,14 @@ export default function ProficiencyComponent(props) {
           </li>
           <li>
             <StyledText> Web apps with </StyledText>
-            <StyledText highlight> React and Vue </StyledText>
+            <StyledText highlight> React </StyledText>
           </li>
           <li>
             <StyledText> Cross-platform apps with </StyledText>
             <StyledText highlight> Flutter </StyledText>
           </li>
           <li>
-            <StyledText> Native apps with </StyledText>
-            <StyledText highlight> Kotlin </StyledText>
+            <StyledText> Native android apps </StyledText>
           </li>
         </ul>
         <div className='hidden sm:flex mt-10 flex-row w-full'>

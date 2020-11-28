@@ -43,27 +43,30 @@
   overscroll-behavior: none;
 }
 
-.ul-large {
-  margin-top: 1em;
-  padding-left: 20px;
-  list-style: initial;
-}
-
-.ul-large li {
-  padding: 8px 0;
-  font-size: 25px;
-}
-
-.ul-small {
+.ul-custom {
   margin-top: 1em;
   padding-left: 10px;
   list-style: initial;
 }
 
-.ul-small li {
-  padding: 8px 0;
+.ul-custom li {
+  padding: 1px 0;
   font-size: 20px;
 }
+
+@media screen and (min-width: 720px) {
+  .ul-custom {
+    margin-top: 1em;
+    padding-left: 20px;
+    list-style: initial;
+  }
+  
+  .ul-custom li {
+    padding: 8px 0;
+    font-size: 25px;
+  }
+}
+
 
 .stroke-width-3 {
   stroke-width: 3;
