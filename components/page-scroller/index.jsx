@@ -18,7 +18,8 @@ function Indicator (props) {
     return (
       <button className='focus:outline-none' onClick={props.onClick}>
         <svg className={'w-6 h-6 mb-4 ' + extra} key={props.key}>
-          <circle cx='50%' cy='50%' r='8' />
+          <circle className='hidden sm:block' cx='50%' cy='50%' r='8' />
+          <circle className='block sm:hidden' cx='50%' cy='50%' r='6' />
         </svg>
       </button>
     )
