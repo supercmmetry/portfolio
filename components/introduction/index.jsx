@@ -1,8 +1,8 @@
 import ProfilePictureComponent from '../profile-pic'
 
-export default function IntroductionComponent () {
+export default function IntroductionComponent (props) {
   return (
-    <>
+    <div className={props.className}>
       <div className='p-5'>
         <div className='flex flex-col sm:flex-row sm:justify-start'>
           <ProfilePictureComponent className='sm:mr-6 ml-auto mr-auto sm:ml-0 sm:mr-0' />
@@ -15,6 +15,6 @@ export default function IntroductionComponent () {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
