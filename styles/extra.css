@@ -1,0 +1,30 @@
+.w-fit {
+  width: fit-content;
+}
+
+.h-fit {
+  height: fit-content;
+}
+
+.align-vh-center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
+
+.no-tap-highlight {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.layer-high {
+  z-index: 10
+}
+
+.layer-mid {
+  z-index: 5
+}

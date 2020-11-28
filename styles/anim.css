@@ -1,8 +1,32 @@
-.smooth-transition {
-  transition: transform .8s cubic-bezier(.58,-0.37,.45,1.46),
+.cubic-bezier-transition {
+  transition: transform 1s cubic-bezier(.58,-0.37,.45,1.46),
     color 0s ease .4s;
+}
+
+.smooth-transition {
+  transition: transform 0.6s ease .4s;
 }
 
 .rotate-360 {
   transform: rotate(360deg);
+}
+
+.polar-deg180 {
+  position: relative;
+  transform: translateX(-250%)
+}
+
+.polar-deg150 {
+  position: relative;
+  transform: translateX(-216%) translateY(-125%)
+}
+
+.polar-deg120 {
+  position: relative;
+  transform: translateX(-125%) translateY(-216%)
+}
+
+.polar-deg90 {
+  position: relative;
+  transform: translateY(-250%)
 }
