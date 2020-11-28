@@ -61,7 +61,7 @@ export default function PageScroller (props) {
           <Indicator focused={currentPage} pages={[0, 1, 2, 3]} pageOnChange={handlePageOnChange} />
           <ReactPageScroller
             pageOnChange={handlePageOnChange} customPageNumber={currentPage}
-            transitionTimingFunction='ease' containerWidth='auto' containerHeight={sm ? '75vh' : '65vh'}
+            transitionTimingFunction='ease' containerWidth='auto' containerHeight={sm ? '75vh' : '62.5vh'}
           >
             <IntroductionComponent className='w-full h-full' handleNextPage={() => setCurrentPage(1)} />
             <SkillsComponent className='w-full h-full' setCurrentPage={setCurrentPage} page={1} />
