@@ -10,7 +10,7 @@ export default function ProfilePictureComponent (props) {
             width: '128px',
             minWidth: '128px',
             height: '128px',
-            minHeight: '128px',
+            minHeight: '128px'
           }} className={'border-normal border-2 ' + props.innerStyle}
         />
       </div>

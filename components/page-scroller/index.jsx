@@ -16,7 +16,7 @@ function Indicator (props) {
     }
 
     return (
-      <button key={props.key} className='focus:outline-none' onClick={props.onClick}>
+      <button className='focus:outline-none' onClick={props.onClick}>
         <svg className={'w-6 h-6 mb-4 ' + extra} key={props.key}>
           <circle className='hidden sm:block' cx='50%' cy='50%' r='8' />
           <circle className='block sm:hidden' cx='50%' cy='50%' r='6' />
@@ -29,7 +29,8 @@ function Indicator (props) {
     <div className='h-auto w-auto mt-auto mb-auto ml-2 sm:mr-4'>
       <div className='flex flex-col space-between h-full'>
         {props.pages.map(i => {
-          return <IndicatorDot key={`indicator-dot-${i}`} focused={props.focused === i} onClick={() => props.pageOnChange(i)} />
+          /* eslint-disable-next-line */
+          return <IndicatorDot focused={props.focused === i} onClick={() => props.pageOnChange(i)} />
         })}
       </div>
     </div>
