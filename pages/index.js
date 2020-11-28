@@ -1,14 +1,14 @@
-import { FaviconComponent, AppBar, PageScroller } from '../components'
-import SocialFloatingActionButton from '../components/social-fab'
+import { FaviconComponent, AppBar, PageScroller, SocialFloatingActionButton, FooterComponent } from '../components'
 
 export default function HomePage () {
   return (
     <>
-      <script src='//unpkg.com/prevent-pull-refresh' />
+      <script src='http://unpkg.com/prevent-pull-refresh' />
       <FaviconComponent />
       <AppBar />
-      <PageScroller />
+      <PageScroller className='mt-8'/>
       <SocialFloatingActionButton />
+      <FooterComponent />
     </>
   )
 }

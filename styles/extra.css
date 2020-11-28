@@ -42,3 +42,14 @@
 .disable-refresh {
   overscroll-behavior: none;
 }
+
+.ul-large {
+  margin-top: 1em;
+  padding-left: 20px;
+  list-style: initial;
+}
+
+.ul-large li {
+  padding: 8px 0;
+  font-size: 20px;
+}
