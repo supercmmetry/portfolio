@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactPageScroller from 'react-page-scroller'
 import IntroductionComponent from '../introduction'
 import SkillsComponent from '../skills'
@@ -16,7 +16,7 @@ function Indicator (props) {
     }
 
     return (
-      <button className='focus:outline-none' onClick={props.onClick}>
+      <button key={props.key} className='focus:outline-none' onClick={props.onClick}>
         <svg className={'w-6 h-6 mb-4 ' + extra} key={props.key}>
           <circle className='hidden sm:block' cx='50%' cy='50%' r='8' />
           <circle className='block sm:hidden' cx='50%' cy='50%' r='6' />
@@ -38,10 +38,17 @@ function Indicator (props) {
 
 export default function PageScroller (props) {
   const [currentPage, setCurrentPage] = React.useState(0)
+  const [sm, setSm] = React.useState(false)
 
   const handlePageOnChange = (i) => {
     setCurrentPage(i)
   }
+
+  useEffect(() => {
+    if (window) {
+      setSm(window.innerWidth >= 640)
+    }
+  }, [])
 
   return (
     <>
@@ -50,7 +57,7 @@ export default function PageScroller (props) {
           <Indicator focused={currentPage} pages={[0, 1, 2, 3]} pageOnChange={handlePageOnChange} />
           <ReactPageScroller
             pageOnChange={handlePageOnChange} customPageNumber={currentPage}
-            transitionTimingFunction='ease' containerWidth='auto' containerHeight='65vh'
+            transitionTimingFunction='ease' containerWidth='auto' containerHeight={sm ? '75vh' : '65vh'}
           >
             <IntroductionComponent className='w-full h-full' handleNextPage={() => setCurrentPage(1)} />
             <SkillsComponent className='w-full h-full' setCurrentPage={setCurrentPage} page={1} />

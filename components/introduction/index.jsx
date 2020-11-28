@@ -7,7 +7,7 @@ export default function IntroductionComponent (props) {
       <div className='p-5 w-fit'>
         <div className='flex flex-col'>
           <div className='flex flex-col lg:flex-row sm:justify-start mt-16 sm:mt-0'>
-            <ProfilePictureComponent innerStyle='w-36 h-36 sm:block hidden' className='lg:mr-6 ml-auto mr-auto lg:ml-0 lg:mr-0' />
+            <ProfilePictureComponent innerStyle='sm:block hidden' className='lg:mr-6 ml-auto mr-auto lg:ml-0 lg:mr-0' />
             <div className='flex flex-col mt-5 ml-auto mr-auto lg:ml-0 lg:mr-0'>
               <span className='font-workSans font-semibold text-foreground text-3xl sm:text-5xl text-center'> Hi! I'm Vishaal Selvaraj, </span>
               <div className='ml-auto mr-auto sm:ml-0 sm:mr-0 text-center'>
