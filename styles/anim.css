@@ -4,7 +4,7 @@
 }
 
 .smooth-transition {
-  transition: transform 0.6s ease .4s;
+  transition: transform 0.6s ease .4s, opacity 1s;
 }
 
 .rotate-360 {
@@ -12,21 +12,17 @@
 }
 
 .polar-deg180 {
-  position: relative;
   transform: translateX(-250%)
 }
 
 .polar-deg150 {
-  position: relative;
   transform: translateX(-216%) translateY(-125%)
 }
 
 .polar-deg120 {
-  position: relative;
   transform: translateX(-125%) translateY(-216%)
 }
 
 .polar-deg90 {
-  position: relative;
   transform: translateY(-250%)
 }

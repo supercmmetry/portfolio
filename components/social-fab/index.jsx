@@ -11,20 +11,20 @@ function RotationAnimation (props) {
 }
 
 function SocialButtonExpander (props) {
-  const polarStyle = (x) => {
+  const triggeredStyle = (x) => {
     if (props.triggered) {
-      return x
+      return x + ' opacity-100'
     }
 
-    return ''
+    return 'opacity-0'
   }
 
   return (
     <>
-      <AbstractFloatingActionButton type='mail' className={polarStyle('polar-deg180') + ' w-14 h-14 smooth-transition ' + props.className} />
-      <AbstractFloatingActionButton type='telegram' className={polarStyle('polar-deg150') + ' w-14 h-14 smooth-transition ' + props.className} />
-      <AbstractFloatingActionButton type='linkedin' className={polarStyle('polar-deg120') + ' w-14 h-14 smooth-transition ' + props.className} />
-      <AbstractFloatingActionButton type='github' className={polarStyle('polar-deg90') + ' w-14 h-14 smooth-transition ' + props.className} />
+      <AbstractFloatingActionButton innerStyle='wh-5-i' type='mail' className={triggeredStyle('polar-deg180') + ' wh-9-i smooth-transition ' + props.className} />
+      <AbstractFloatingActionButton innerStyle='wh-5-i' type='telegram' className={triggeredStyle('polar-deg150') + ' wh-9-i smooth-transition ' + props.className} />
+      <AbstractFloatingActionButton innerStyle='wh-5-i' type='linkedin' className={triggeredStyle('polar-deg120') + ' wh-9-i smooth-transition ' + props.className} />
+      <AbstractFloatingActionButton innerStyle='wh-5-i' type='github' className={triggeredStyle('polar-deg90') + ' wh-9-i smooth-transition ' + props.className} />
     </>
   )
 }
@@ -32,20 +32,16 @@ function SocialButtonExpander (props) {
 function AbstractFloatingActionButton (props) {
   if (props.type === 'contact') {
     return (
-      <div className={props.className}>
-        <button className='rounded-full bg-background w-14 h-14 border-2 border-foreground focus:outline-none no-tap-highlight' onClick={props.onClick}>
-          <SocialButton raw type={props.type} className='align-vh-center' />
-        </button>
-      </div>
+      <button className={'rounded-full bg-background w-14 h-14 border-2 border-foreground focus:outline-none no-tap-highlight ' + props.className} onClick={props.onClick}>
+        <SocialButton raw type={props.type} className={'align-vh-center ' + props.innerStyle} />
+      </button>
     )
   }
 
   return (
-    <div className={props.className}>
-      <button className='rounded-full bg-background w-14 h-14 border-2 border-foreground focus:outline-none no-tap-highlight' onClick={() => execActionFromType(props.type)}>
-        <SocialButton raw type={props.type} className='align-vh-center' />
-      </button>
-    </div>
+    <button className={'rounded-full bg-background w-14 h-14 border-2 border-foreground focus:outline-none no-tap-highlight ' + props.className} onClick={() => execActionFromType(props.type)}>
+      <SocialButton raw type={props.type} className={'align-vh-center ' + props.innerStyle} />
+    </button>
   )
 }
 
@@ -62,7 +58,7 @@ export default function SocialFloatingActionButton (props) {
           <AbstractFloatingActionButton type='contact' onClick={handleOnClick} />
         </RotationAnimation>
       </div>
-      <SocialButtonExpander triggered={expanded} className='layer-mid fixed right-5 bottom-5 sm:hidden block' />
+      <SocialButtonExpander triggered={expanded} className='layer-mid fixed right-7 bottom-7 sm:hidden block' />
     </>
   )
 }

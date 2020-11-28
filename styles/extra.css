@@ -28,3 +28,13 @@
 .layer-mid {
   z-index: 5
 }
+
+.wh-5-i {
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+}
+
+.wh-9-i {
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+}
