@@ -5,9 +5,9 @@ export default function AppBar () {
     <>
       <div className='w-full h-min flex flex-row bg-opacity-20 object-top p-4'>
         <div className='flex flex-row justify-start m-2'>
-          <span className='font-workSans font-semibold text-foreground text-3xl'> super </span>
-          <span className='font-workSans font-semibold text-hover text-3xl'> c </span>
-          <span className='font-workSans font-semibold text-foreground text-3xl'> mmetry </span>
+          <span className='font-workSans font-semibold text-foreground sm:text-3xl text-2xl'> super </span>
+          <span className='font-workSans font-semibold text-hover sm:text-3xl text-2xl'> c </span>
+          <span className='font-workSans font-semibold text-foreground sm:text-3xl text-2xl'> mmetry </span>
         </div>
         <div className='justify-end space-between w-full mr-2 hidden sm:flex'>
           <SocialButton type='github' className='m-2' />

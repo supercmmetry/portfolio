@@ -6,7 +6,7 @@ export default function HomePage () {
       <script src='http://unpkg.com/prevent-pull-refresh' />
       <FaviconComponent />
       <AppBar />
-      <PageScroller className='mt-8'/>
+      <PageScroller className='sm:mt-20 sm:ml-10' />
       <SocialFloatingActionButton />
       <FooterComponent />
     </>

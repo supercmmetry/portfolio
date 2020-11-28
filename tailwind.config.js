@@ -8,7 +8,9 @@ module.exports = {
         foreground: '#EEFBFB',
         disabled: '#203647',
         hover: '#04D9FF',
-        normal: '#007CC7'
+        normal: '#007CC7',
+        skin: '#EEFBFB1f',
+        skinHover: '#04D9FF5f'
       },
       fill: theme => theme('colors'),
       fontFamily: {
