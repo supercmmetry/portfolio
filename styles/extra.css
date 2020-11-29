@@ -29,6 +29,10 @@
   z-index: 5
 }
 
+.layer-low {
+  z-index: 3
+}
+
 .wh-5-i {
   width: 1.25rem !important;
   height: 1.25rem !important;

@@ -1,4 +1,3 @@
-import SkinButton from '../skin-button'
 import StyledText from '../styled-text'
 
 export default function SkillsComponent (props) {
@@ -23,10 +22,6 @@ export default function SkillsComponent (props) {
             <StyledText> Kotlin & Java </StyledText>
           </li>
         </ul>
-        <div className='hidden sm:flex mt-10 flex-row w-full'>
-          <SkinButton className='mr-auto' onClick={() => props.setCurrentPage(props.page - 1)}> {'< Back'} </SkinButton>
-          <SkinButton onClick={() => props.setCurrentPage(props.page + 1)}> {'Next >'} </SkinButton>
-        </div>
       </div>
     </div>
   )

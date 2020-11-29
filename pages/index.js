@@ -10,7 +10,7 @@ export default function HomePage () {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='theme-color' content='#000000' />
         <meta name='description' content='supercmmetry portfolio' />
-        <script src='https://unpkg.com/prevent-pull-refresh' />
+        {/* <script src='https://unpkg.com/prevent-pull-refresh' /> */}
       </Head>
       <FaviconComponent />
       <AppBar />

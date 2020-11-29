@@ -1,5 +1,4 @@
 import StyledText from '../styled-text'
-import SkinButton from '../skin-button'
 
 export default function ProficiencyComponent (props) {
   return (
@@ -27,10 +26,6 @@ export default function ProficiencyComponent (props) {
             <StyledText> Native android apps </StyledText>
           </li>
         </ul>
-        <div className='hidden sm:flex mt-10 flex-row w-full'>
-          <SkinButton className='mr-auto' onClick={() => props.setCurrentPage(props.page - 1)}> {'< Back'} </SkinButton>
-          <SkinButton onClick={() => props.setCurrentPage(props.page + 1)}> {'Next >'} </SkinButton>
-        </div>
       </div>
     </div>
   )

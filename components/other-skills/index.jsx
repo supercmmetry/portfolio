@@ -1,5 +1,4 @@
 import StyledText from '../styled-text'
-import SkinButton from '../skin-button'
 
 export default function OtherSkillsComponent (props) {
   return (
@@ -25,9 +24,6 @@ export default function OtherSkillsComponent (props) {
             <StyledText highlight> CUDA </StyledText>
           </li>
         </ul>
-        <div className='hidden sm:flex mt-10 flex-row w-full'>
-          <SkinButton className='mr-auto' onClick={() => props.setCurrentPage(props.page - 1)}> {'< Back'} </SkinButton>
-        </div>
       </div>
     </div>
   )
